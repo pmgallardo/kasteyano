@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasteyano</title>
+</head>
+
+<body>
+    <h1>Kasteyano</h1>
+    <p>Kasteyano es una herramienta que modifica un texto en español para aplicarle una ortografía simplificada.</p>
+    <form action="/" method="post">
+        <h2>Texto de entrada:</h2>
+        <label for="texto">Texto de entrada:</label>
+        <input type="text" id="texto" name="texto" value="<%= texto %>"><br>
+
+        <h2>Configuración:</h2>
+        <input type="checkbox" id="eliminarTildes" name="eliminarTildes">
+        <label for="eliminarTildes">Eliminar tildes</label><br>
+        
+        <input type="checkbox" id="eliminarH" name="eliminarH">
+        <label for="eliminarH">Eliminar letra 'h'</label><br>
+        
+        <input type="checkbox" id="reemplazarVPorB" name="reemplazarVPorB">
+        <label for="reemplazarVporB">Reemplazar 'v' por 'b'</label><br>
+
+        <input type="checkbox" id="reemplazarXPorKs" name="reemplazarXPorKs">
+        <label for="reemplazarXPorKs">Reemplazar 'x' por 'ks'</label><br>
+
+        <input type="checkbox" id="reemplazarCPorK" name="reemplazarCPorK">
+        <label for="reemplazarCPorK">Reemplazar 'c' por 'k'</label><br>
+        
+        <input type="checkbox" id="reemplazarQuPorK" name="reemplazarQuPorK">
+        <label for="reemplazarQuPorK">Reemplazar 'qu' por 'k'</label><br>
+
+        <input type="checkbox" id="reemplazarCPorZ" name="reemplazarCPorZ">
+        <label for="reemplazarXPorKs">Reemplazar 'c' por 'z'</label><br>
+        
+        <input type="checkbox" id="reemplazarLlPorY" name="reemplazarLlPorY">
+        <label for="reemplazarLlPorY">Reemplazar 'll' por 'y'</label><br>
+
+        <input type="checkbox" id="modificarCapitalizacion" name="modificarCapitalizacion">
+        <label for="modificarCapitalizacion">Modificar capitalización:</label><br>
+        <div style="margin-left: 20px;">
+          <input type="radio" id="aMayusculas" name="modificacionCase" value="aMayusculas">
+          <label for="aMayusculas">Cambiar a mayúsculas</label><br>
+
+          <input type="radio" id="aMinusculas" name="modificacionCase" value="aMinusculas">
+          <label for="aMinusculas">Cambiar a minúsculas</label><br>
+        </div>
+
+        <button type="submit">Transformar</button>
+    </form>
+
+    <h2>Resultado:</h2>
+    <p><%= resultado %></p>
+</body>
+
+</html>
